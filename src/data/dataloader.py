@@ -7,8 +7,8 @@ transform = transforms.Compose([
 ])
 
 # Tải bộ dữ liệu MNIST (không tải lại, áp dụng transformations)
-trainset = datasets.MNIST(root='./src/data', train=True, download=False, transform=transform)
-testset = datasets.MNIST(root='./src/data', train=False, download=False, transform=transform)
+trainset = datasets.MNIST(root='./src/data', train=True, download=True, transform=transform)
+testset = datasets.MNIST(root='./src/data', train=False, download=True, transform=transform)
 
 # Chia tập huấn luyện thành train và validation (80% train, 20% val)
 train_size = int(0.8 * len(trainset))  # Tính kích thước train
@@ -25,3 +25,4 @@ images, labels = next(iter(trainloader))
 
 # In kích thước batch
 print(images.shape)
+
