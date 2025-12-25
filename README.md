@@ -66,10 +66,13 @@ Quá trình này sẽ tự động tải dữ liệu nếu chưa có.
 
 ### 3. Kiểm thử (Prediction)
 Sử dụng script predict.py để dự đoán trên ảnh tự vẽ. Lưu ý ảnh đầu vào nên có nền đen chữ trắng hoặc được tiền xử lý đảo màu tương ứng để khớp với dữ liệu MNIST.
-    3.1. Chuyển ảnh cần dự đoán vào thư mục chứa tệp predict.py (Nếu không muốn, bạn có thể không cần làm bước này)
-    3.2. Trong tệp predict.py, lướt xuống hàm def main, dưới #4. GỌI HÀM DỰ ĐOÁN ẢNH CỦA EM, thay "Screenshot 2025-12-12 165610.png" thành đường dẫn tương đối của ảnh cần dự đoán (Có thể dùng ảnh bạn vừa truyền vào, hoặc ảnh đã được cung cấp sẵn). Vd: "anh2.png"
-    3.3. Trong Terminal của VScode, chạy lệnh sau để bắt đầu dự đoán:
-        
+    
++ Chuyển ảnh cần dự đoán vào thư mục chứa tệp predict.py (Nếu không muốn, bạn có thể không cần làm bước này)
+    
++ Trong tệp predict.py, lướt xuống hàm def main, dưới #4. GỌI HÀM DỰ ĐOÁN ẢNH CỦA EM, thay "Screenshot 2025-12-12 165610.png" thành đường dẫn tương đối của ảnh cần dự đoán (Có thể dùng ảnh bạn vừa truyền vào, hoặc ảnh đã được cung cấp sẵn). Vd: "anh2.png"
+
++ Trong Terminal của VScode, chạy lệnh sau để bắt đầu dự đoán:
+
         python3 predict.py
 
 ## 🔮 Hướng phát triển
@@ -108,6 +111,7 @@ Mặc dù kết quả khả quan, dự án dự kiến sẽ cải tiến thêm c
         └── README.md                    # Tài liệu mô tả dự án
 
 ## 👥 Tác giả
+
 Nhóm thực hiện:
 1. Võ Ngọc Bảo
 2. Nguyễn Quốc Anh
@@ -115,6 +119,7 @@ Nhóm thực hiện:
 4. Trương Thị Ngọc Hà
 5. Nguyễn Hoàng Châu
 6. Đỗ Xuân Huy
+
 Giảng viên hướng dẫn thực hành: Lê Đức Khoan
 
 # BẢNG PHÂN CÔNG:
