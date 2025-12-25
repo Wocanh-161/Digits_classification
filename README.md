@@ -80,31 +80,32 @@ Mặc dù kết quả khả quan, dự án dự kiến sẽ cải tiến thêm c
 + Phân tích sai số: Sử dụng Confusion Matrix để phân tích các cặp số hay bị nhầm lẫn.
 
 ## Cấu trúc thư mục:
-Digits_classification/
-│
-├── configs/
-│   └── config.yaml              # File cấu hình (hyperparameters, đường dẫn, batch size, ...)
-│
-├── data/
-│   └── MNIST/
-│       └── raw/                 # Dữ liệu MNIST gốc (ảnh & nhãn)
-│
-├── src/
-│   ├── data/
-│   │   ├── dataloader.py        # Nạp và tiền xử lý dữ liệu
-│   │   └── MNIST/
-│   │       └── raw/             # Dữ liệu MNIST gốc (ảnh & nhãn)
-│   │
-│   ├── losses/
-│   │   └── loss.py              # Định nghĩa hàm mất mát
-│   │
-│   └── models/
-│       └── model.py             # Định nghĩa kiến trúc mạng CNN
-│
-├── predict.py                   # Script dự đoán chữ số từ ảnh ngoài
-├── trainer.py                   # Script huấn luyện mô hình CNN
-├── requirements.txt             # Danh sách thư viện cần thiết
-└── README.md                    # Tài liệu mô tả dự án
+
+        Digits_classification/
+        │
+        ├── configs/
+        │   └── config.yaml              # File cấu hình (hyperparameters, đường dẫn, batch size, ...)
+        │
+        ├── data/
+        │   └── MNIST/
+        │       └── raw/                 # Dữ liệu MNIST gốc (ảnh & nhãn)
+        │
+        ├── src/
+        │   ├── data/
+        │   │   ├── dataloader.py        # Nạp và tiền xử lý dữ liệu
+        │   │   └── MNIST/
+        │   │       └── raw/             # Dữ liệu MNIST gốc (ảnh & nhãn)
+        │   │
+        │   ├── losses/
+        │   │   └── loss.py              # Định nghĩa hàm mất mát
+        │   │
+        │   └── models/
+        │       └── model.py             # Định nghĩa kiến trúc mạng CNN
+        │
+        ├── predict.py                   # Script dự đoán chữ số từ ảnh ngoài
+        ├── trainer.py                   # Script huấn luyện mô hình CNN
+        ├── requirements.txt             # Danh sách thư viện cần thiết
+        └── README.md                    # Tài liệu mô tả dự án
 
 ## 👥 Tác giả
 Nhóm thực hiện:
