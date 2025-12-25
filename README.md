@@ -34,11 +34,13 @@ Mô hình được thiết kế để khai thác đặc trưng không gian 2D c�
 
 ## 📊 Kết quả Thực nghiệm
 Sau quá trình huấn luyện và kiểm thử, mô hình đạt được các chỉ số ấn tượng:
+
 | Tập dữ liệu | Độ chính xác (Accuracy) |
 | :--- | :---: |
 | **Train** | **99%** |
 | **Validation** | **98.82%** |
 | **Test** | **90% - 99.88%** |
+
 So sánh với MLP (Multi-Layer Perceptron):CNN vượt trội hơn MLP (chỉ đạt 97-98%) nhờ khả năng bảo toàn cấu trúc không gian của ảnh và khả năng bất biến với các dịch chuyển nhỏ.
 
 ## 🚀 Hướng dẫn Cài đặt & Sử dụng. 
@@ -74,29 +76,29 @@ Mặc dù kết quả khả quan, dự án dự kiến sẽ cải tiến thêm c
 ## Cấu trúc thư mục:
 Digits_classification/
 │
-├── configs
+├── configs/
 │   └── config.yaml              # File cấu hình (hyperparameters, đường dẫn, batch size, ...)
-|
-├── data
-|   └── MNIST
-|       └── raw             # Dữ liệu MNIST gốc (ảnh & nhãn)
-|
-├──src/
-|    ├── data/
-|    │   ├── dataloader.py        # Load và tiền xử lý 
-|    |    └── MNIST/
-|    |      └── raw/             # Dữ liệu MNIST gốc (ảnh & nhãn)
-|    │
-|    ├── losses/
-|    |    └── loss.py              # Định nghĩa hàm mất mát
-|    │
-|    └── models/
-|       └── model.py             # Định nghĩa kiến trúc mạng CNN
-|
-├── predict.py
-├── README.md                    # Tài liệu mô tả dự án
+│
+├── data/
+│   └── MNIST/
+│       └── raw/                 # Dữ liệu MNIST gốc (ảnh & nhãn)
+│
+├── src/
+│   ├── data/
+│   │   ├── dataloader.py        # Nạp và tiền xử lý dữ liệu
+│   │   └── MNIST/
+│   │       └── raw/             # Dữ liệu MNIST gốc (ảnh & nhãn)
+│   │
+│   ├── losses/
+│   │   └── loss.py              # Định nghĩa hàm mất mát
+│   │
+│   └── models/
+│       └── model.py             # Định nghĩa kiến trúc mạng CNN
+│
+├── predict.py                   # Script dự đoán chữ số từ ảnh ngoài
+├── trainer.py                   # Script huấn luyện mô hình CNN
 ├── requirements.txt             # Danh sách thư viện cần thiết
-└── trainer.py                   # Script huấn luyện mô hình CNN
+└── README.md                    # Tài liệu mô tả dự án
 
 ## 👥 Tác giả
 Nhóm thực hiện:
