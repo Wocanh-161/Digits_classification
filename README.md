@@ -1,5 +1,5 @@
 # DIGITS CLASSIFICATION - ỨNG DỤNG MẠNG NƠ-RON TÍCH CHẬP (CNN) TRONG PHÂN LOẠI CHỮ SỐ VIẾT TAY VỚI TẬP DỮ LIỆU MNIST
-Dự án này tập trung nghiên cứu và ứng dụng Mạng nơ-ron tích chập (CNN) để giải quyết bài toán nhận diện và phân loại chữ số viết tay. Mô hình được huấn luyện trên tập dữ liệu chuẩn MNIST và đạt được hiệu quả vượt trội so với các phương pháp truyền thống như MLP hay SVM
+Dự án này tập trung nghiên cứu và ứng dụng Mạng nơ-ron tích chập (CNN) để giải quyết bài toán nhận diện và phân loại chữ số viết tay. Mô hình được huấn luyện trên tập dữ liệu chuẩn MNIST và đạt được hiệu quả vượt trội so với các phương pháp truyền thống như MLP hay SVM.
 
 ## 📖 Tổng quan
 Trong kỷ nguyên số hóa, bài toán nhận dạng quang học (OCR) đóng vai trò then chốt. Dự án này xây dựng một quy trình (pipeline) hoàn chỉnh từ tiền xử lý dữ liệu, thiết kế kiến trúc mạng, huấn luyện và đánh giá mô hình.
@@ -11,22 +11,22 @@ Mục tiêu chính:
 ## 🛠 Công cụ và Thư viện
 Dự án được phát triển trên ngôn ngữ Python, sử dụng các thư viện sau:
 + Pytorch (torch): Framework chính, xây dựng kiến trúc mạng và lan truyền ngược.
-+ Torchvision: Cung cấp bộ dữ liệu MNIST và các công cụ tiền xử lý ảnh (Transform)
-+ Numpy: Hỗ trợ tính toán ma trận và xử lý dữ liệu đầu vào
-+ Pillow (PIL): Xử lý ảnh thực tế bên ngoài cho quá trình dự đoán (Inference)
++ Torchvision: Cung cấp bộ dữ liệu MNIST và các công cụ tiền xử lý ảnh (Transform).
++ Numpy: Hỗ trợ tính toán ma trận và xử lý dữ liệu đầu vào.
++ Pillow (PIL): Xử lý ảnh thực tế bên ngoài cho quá trình dự đoán (Inference).
 + Tqdm: Hiển thị thanh tiến trình huấn luyện.
 Môi trường phần cứng hỗ trợ tự động chuyển đổi giữa CPU và GPU (CUDA) để tăng tốc tính toán.
 
 ## 🧠 Kiến trúc Mô hình (SimpleCNN)
 Mô hình được thiết kế để khai thác đặc trưng không gian 2D của ảnh chữ số. Kiến trúc cụ thể bao gồm:
-+ Lớp Tích chập 1 (Conv1): 32 kernel (3x3), hàm kích hoạt ReLU
-+ Lớp Pooling 1: Max Pooling (2x2) để giảm kích thước không gian
-+ Lớp Tích chập 2 (Conv2): 64 kernel (3x3), hàm kích hoạt ReLU
-+ Lớp Pooling 2: Max Pooling (2x2)
-+ Lớp Kết nối đầy đủ (Fully Connected): Làm phẳng (Flatten) feature maps và đưa vào mạng nơ-ron để phân loại. Đầu ra: Sử dụng hàm Softmax để xác định xác suất cho 10 lớp chữ số (0-9)
++ Lớp Tích chập 1 (Conv1): 32 kernel (3x3), hàm kích hoạt ReLU.
++ Lớp Pooling 1: Max Pooling (2x2) để giảm kích thước không gian.
++ Lớp Tích chập 2 (Conv2): 64 kernel (3x3), hàm kích hoạt ReLU.
++ Lớp Pooling 2: Max Pooling (2x2).
++ Lớp Kết nối đầy đủ (Fully Connected): Làm phẳng (Flatten) feature maps và đưa vào mạng nơ-ron để phân loại. Đầu ra: Sử dụng hàm Softmax để xác định xác suất cho 10 lớp chữ số (0-9).
 
 ## ⚙️ Quy trình Huấn luyện
-+ Dữ liệu: Tập MNIST gồm 60.000 ảnh huấn luyện và 10.000 ảnh kiểm tra, kích thước 28x28 pixel (grayscale)
++ Dữ liệu: Tập MNIST gồm 60.000 ảnh huấn luyện và 10.000 ảnh kiểm tra, kích thước 28x28 pixel (grayscale).
 + Tiền xử lý: Chuẩn hóa giá trị pixel về [0, 1], One-hot encoding nhãn, chia Batch size = 64.
 + Hàm mất mát (Loss Function): Categorical Cross-Entropy Loss.
 + Thuật toán tối ưu (Optimizer): Adam (cho tốc độ hội tụ nhanh hơn SGD).
@@ -67,7 +67,7 @@ Quá trình này sẽ tự động tải dữ liệu nếu chưa có.
 ### 3. Kiểm thử (Prediction)
 Sử dụng script predict.py để dự đoán trên ảnh tự vẽ. Lưu ý ảnh đầu vào nên có nền đen chữ trắng hoặc được tiền xử lý đảo màu tương ứng để khớp với dữ liệu MNIST.
     
-+ Chuyển ảnh cần dự đoán vào thư mục chứa tệp predict.py (Nếu không muốn, bạn có thể không cần làm bước này)
++ Chuyển ảnh cần dự đoán vào thư mục chứa tệp predict.py (Nếu không muốn, bạn có thể không cần làm bước này).
     
 + Trong tệp predict.py, lướt xuống hàm def main, dưới #4. GỌI HÀM DỰ ĐOÁN ẢNH CỦA EM, thay "Screenshot 2025-12-12 165610.png" thành đường dẫn tương đối của ảnh cần dự đoán (Có thể dùng ảnh bạn vừa truyền vào, hoặc ảnh đã được cung cấp sẵn). Vd: "anh2.png"
 
@@ -113,14 +113,12 @@ Mặc dù kết quả khả quan, dự án dự kiến sẽ cải tiến thêm c
 ## 👥 Tác giả
 
 Nhóm thực hiện:
-1. Võ Ngọc Bảo
-2. Nguyễn Quốc Anh
-3. Đinh Ngọc Bích
-4. Trương Thị Ngọc Hà
-5. Nguyễn Hoàng Châu
-6. Đỗ Xuân Huy
 
-Giảng viên hướng dẫn thực hành: Lê Đức Khoan
+1. Võ Ngọc Bảo                4. Trương Thị Ngọc Hà
+2. Nguyễn Quốc Anh            5. Nguyễn Hoàng Châu
+3. Đinh Ngọc Bích             6. Đỗ Xuân Huy
+
+Giảng viên hướng dẫn thực hành: Lê Đức Khoan.
 
 # BẢNG PHÂN CÔNG:
 <img width="1869" height="811" alt="image" src="https://github.com/user-attachments/assets/54731508-5fb4-4a31-893d-16d9e389057e" />
