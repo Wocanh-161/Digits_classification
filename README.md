@@ -114,11 +114,14 @@ Mặc dù kết quả khả quan, dự án dự kiến sẽ cải tiến thêm c
 
 Nhóm thực hiện:
 
-1. Võ Ngọc Bảo                4. Trương Thị Ngọc Hà
-2. Nguyễn Quốc Anh            5. Nguyễn Hoàng Châu
-3. Đinh Ngọc Bích             6. Đỗ Xuân Huy
+1. Võ Ngọc Bảo                
+2. Nguyễn Quốc Anh            
+3. Đinh Ngọc Bích             
+4. Trương Thị Ngọc Hà
+5. Nguyễn Hoàng Châu
+6. Đỗ Xuân Huy
 
-Giảng viên hướng dẫn thực hành: Lê Đức Khoan.
+Giảng viên hướng dẫn thực hành: Lê Đức Khoan
 
 # BẢNG PHÂN CÔNG:
 <img width="1869" height="811" alt="image" src="https://github.com/user-attachments/assets/54731508-5fb4-4a31-893d-16d9e389057e" />
