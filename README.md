@@ -47,16 +47,21 @@ So sánh với MLP (Multi-Layer Perceptron):CNN vượt trội hơn MLP (chỉ �
 ### 1. Cài đặt môi trường: 
 Đồ án khuyến khích sử dụng **Micromamba** (hoặc **Conda**) để quản lý môi trường nhằm xung tránh xung đột thư viện.
 + Thiết lập môi trường:
-    | micromamba create -n Main_env python = 3.10 | 
-    | micromamba activate Main_env |
-+ Clone dự án:
-    https://github.com/Wocanh-161/Digits_classification.git
+
+        micromamba create -n Main_env python = 3.10 
+        micromamba activate Main_env
+  
++ Clone dự án: https://github.com/Wocanh-161/Digits_classification.git
+
 + Cài đặt thư viện:
-    pip install -r requirements.txt
+
+        pip install -r requirements.txt
 
 ### 2. Huấn luyện mô hình
-Chạy script huấn luyện (Trainer) để bắt đầu train mô hình trên tập MNIST. 
-    | python3 trainer.py |
+Chạy script huấn luyện (Trainer) để bắt đầu train mô hình trên tập MNIST.
+
+    python3 trainer.py
+
 Quá trình này sẽ tự động tải dữ liệu nếu chưa có.
 
 ### 3. Kiểm thử (Prediction)
@@ -64,6 +69,7 @@ Sử dụng script predict.py để dự đoán trên ảnh tự vẽ. Lưu ý �
     3.1. Chuyển ảnh cần dự đoán vào thư mục chứa tệp predict.py (Nếu không muốn, bạn có thể không cần làm bước này)
     3.2. Trong tệp predict.py, lướt xuống hàm def main, dưới #4. GỌI HÀM DỰ ĐOÁN ẢNH CỦA EM, thay "Screenshot 2025-12-12 165610.png" thành đường dẫn tương đối của ảnh cần dự đoán (Có thể dùng ảnh bạn vừa truyền vào, hoặc ảnh đã được cung cấp sẵn). Vd: "anh2.png"
     3.3. Trong Terminal của VScode, chạy lệnh sau để bắt đầu dự đoán:
+        
         python3 predict.py
 
 ## 🔮 Hướng phát triển
