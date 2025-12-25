@@ -47,8 +47,8 @@ So sánh với MLP (Multi-Layer Perceptron):CNN vượt trội hơn MLP (chỉ �
 ### 1. Cài đặt môi trường: 
 Đồ án khuyến khích sử dụng **Micromamba** (hoặc **Conda**) để quản lý môi trường nhằm xung tránh xung đột thư viện.
 + Thiết lập môi trường:
-    micromamba create -n Main_env python = 3.10 
-    micromamba activate Main_env
+    | micromamba create -n Main_env python = 3.10 | 
+    | micromamba activate Main_env |
 + Clone dự án:
     https://github.com/Wocanh-161/Digits_classification.git
 + Cài đặt thư viện:
@@ -56,7 +56,7 @@ So sánh với MLP (Multi-Layer Perceptron):CNN vượt trội hơn MLP (chỉ �
 
 ### 2. Huấn luyện mô hình
 Chạy script huấn luyện (Trainer) để bắt đầu train mô hình trên tập MNIST. 
-    python3 trainer.py
+    | python3 trainer.py |
 Quá trình này sẽ tự động tải dữ liệu nếu chưa có.
 
 ### 3. Kiểm thử (Prediction)
