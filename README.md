@@ -19,9 +19,9 @@ Môi trường phần cứng hỗ trợ tự động chuyển đổi giữa CPU 
 
 ## 🧠 Kiến trúc Mô hình (SimpleCNN)
 Mô hình được thiết kế để khai thác đặc trưng không gian 2D của ảnh chữ số. Kiến trúc cụ thể bao gồm:
-+ Lớp Tích chập 1 (Conv1): 32 kernel (3x3), hàm kích hoạt ReLU.
++ Lớp Tích chập 1 (Conv1): 32 kernel (5x5), hàm kích hoạt ReLU.
 + Lớp Pooling 1: Max Pooling (2x2) để giảm kích thước không gian.
-+ Lớp Tích chập 2 (Conv2): 64 kernel (3x3), hàm kích hoạt ReLU.
++ Lớp Tích chập 2 (Conv2): 64 kernel (5x5), hàm kích hoạt ReLU.
 + Lớp Pooling 2: Max Pooling (2x2).
 + Lớp Kết nối đầy đủ (Fully Connected): Làm phẳng (Flatten) feature maps và đưa vào mạng nơ-ron để phân loại. Đầu ra: Sử dụng hàm Softmax để xác định xác suất cho 10 lớp chữ số (0-9).
 
