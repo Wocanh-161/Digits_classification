@@ -27,7 +27,7 @@ Mô hình được thiết kế để khai thác đặc trưng không gian 2D c�
 
 ## ⚙️ Quy trình Huấn luyện
 + Dữ liệu: Tập MNIST gồm 60.000 ảnh huấn luyện và 10.000 ảnh kiểm tra, kích thước 28x28 pixel (grayscale).
-+ Tiền xử lý: Chuẩn hóa giá trị pixel về [0, 1], One-hot encoding nhãn, chia Batch size = 64.
++ Tiền xử lý: Chuẩn hóa giá trị pixel về [-1, 1], One-hot encoding nhãn, chia Batch size = 64.
 + Hàm mất mát (Loss Function): Categorical Cross-Entropy Loss.
 + Thuật toán tối ưu (Optimizer): Adam (cho tốc độ hội tụ nhanh hơn SGD).
 + Chu kỳ huấn luyện: 20 Epochs.
